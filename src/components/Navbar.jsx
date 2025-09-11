@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { logo } from '../assets/images';
+import { building, building1, building2, building3, building4, building5, building6, logo } from '../assets/images';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { RxCrossCircled } from 'react-icons/rx';
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -71,8 +72,22 @@ export default function Navbar() {
         <div className='fixed inset-0 bg-gray bg-opacity-50 z-40' onClick={()=>setnavsidebar(false)}></div>
       )}
 
-      <div className={`fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-50 transform transition-transform duration-300 ${navsidebar ? 'translate-x-0' : '-translate-x-full'}`}>
-
+      <div className={`fixed top-0 left-0 w-110 h-full bg-white px-5 gap-5 shadow-lg z-50 transform transition-transform duration-300 ${navsidebar ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div className='flex justify-between p-10'>
+          <img src={logo} alt="logo" />
+          <RxCrossCircled  className='text-3xl cursor-pointer' onClick={()=>setnavsidebar(false)}/>
+        </div>
+        <p className='text-xl text-justify'>Minimal interiors often feel larger than they are. Neutral colors, natural materials, and an uncluttered layout help reflect light and create an airy,</p>
+        <h3 className='text-2xl py-5 font-bold'>Featured Blog</h3>
+        <div className='grid grid-cols-2 md:grid-cols-3 gap-3'>
+          <img src={building} alt="building"   className='w-[100%] h-40 object-cover '/>
+          <img src={building1} alt="building1" className='w-[100%] h-40 object-cover ' />
+          <img src={building2} alt="building2" className='w-[100%] h-40 object-cover ' />
+          <img src={building3} alt="building3" className='w-[100%] h-40 object-cover ' />
+          <img src={building4} alt="building4" className='w-[100%] h-40 object-cover ' />
+          <img src={building5} alt="building5" className='w-[100%] h-40 object-cover ' />
+          <img src={building6} alt="building6" className='w-[100%] h-40 object-cover ' />
+        </div>
       </div>
 
       {/* Mobile */}
