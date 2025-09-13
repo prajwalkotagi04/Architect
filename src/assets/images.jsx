@@ -9,6 +9,7 @@ import building6 from '../assets/building6.jpg'
 import breadcumb from '../assets/breadcumb-bg.jpg'
 import scale from '../assets/scale.png'
 import about from '../assets/about.jpg'
+import contact from '../assets/contact.jpg'
 
 
-export { logo, building, building1, building2, building3, building4, building5, building6, breadcumb, scale, about }
+export { logo, building, building1, building2, building3, building4, building5, building6, breadcumb, scale, about, contact }
