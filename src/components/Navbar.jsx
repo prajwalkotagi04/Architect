@@ -24,7 +24,7 @@ export default function Navbar() {
     },
     {
       name: 'Projects',
-      path: '/'
+      path: '/projects'
     },
     {
       name: 'Pages',
